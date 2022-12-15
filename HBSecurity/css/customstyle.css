@@ -1,0 +1,17 @@
+﻿.footerlinks {
+    color: white;
+    text-decoration: none !important;
+}
+
+.footerlinks:hover {
+    color: orange;
+}
+
+
+#footer-top {
+    background: #573b8a;
+}
+
+#footer-bottom {
+    background: #6d44b8;
+}
