@@ -6,8 +6,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 mx-auto">
-                <%--mx auto to center.--%>
+            <div class="col-md-6 mx-auto">  <%--mx auto to center.--%>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -139,7 +138,7 @@
                             <div class="col-8 mx-auto">
                                 <center>
                                     <div class="form-group">
-                                        <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnSignUp" runat="server" Text="Sign Up" />
+                                        <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
                                     </div>
                                 </center>
                             </div>

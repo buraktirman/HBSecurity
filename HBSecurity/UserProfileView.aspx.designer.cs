@@ -249,15 +249,6 @@ namespace HBSecurity
         protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
 
         /// <summary>
-        /// cvNewPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator cvNewPassword;
-
-        /// <summary>
         /// btnUpdate control.
         /// </summary>
         /// <remarks>
@@ -265,6 +256,24 @@ namespace HBSecurity
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+
+        /// <summary>
+        /// dsMitreTests control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsMitreTests;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
         /// gvMitreAttacks control.

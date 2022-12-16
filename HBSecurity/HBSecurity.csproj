@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
@@ -2137,6 +2138,8 @@
     <Content Include="imgs\mitre_reports.jpg" />
     <Content Include="imgs\user_login.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="MitreAttacks.aspx" />
+    <Content Include="MitreInfo.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="UserProfileView.aspx" />
@@ -2145,6 +2148,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2165,6 +2175,20 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MitreAttacks.aspx.cs">
+      <DependentUpon>MitreAttacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MitreAttacks.aspx.designer.cs">
+      <DependentUpon>MitreAttacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MitreInfo.aspx.cs">
+      <DependentUpon>MitreInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MitreInfo.aspx.designer.cs">
+      <DependentUpon>MitreInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.aspx.cs">

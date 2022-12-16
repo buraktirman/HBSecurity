@@ -33,12 +33,11 @@
                                     <asp:TextBox CssClass="form-control" ID="txtPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-success btn-block btn-lg" BackColor="#573b8a" ID="btnLogin" runat="server" Text="Login" />
+                                    <asp:Button class="btn btn-success btn-block btn-lg" BackColor="#573b8a" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
                                 </div>
-                                <div class="form-group">
-                                    <a href="UserSignUp.aspx">
-                                        <input class="btn btn-info btn-block btn-lg" BackColor="#9E3FBE" id="btnSignUp" type="button" value="Sign Up" /></a>
-                                </div>
+                                <%--<div class="form-group">
+                                    <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" />
+                                </div>--%>
                             </div>
                         </div>
                     </div>

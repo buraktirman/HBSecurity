@@ -28,7 +28,7 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="Home.aspx">
                     <img src="imgs/hb_security_logo.jpg"  height="100" />
                     HB Security
                 </a>
@@ -52,23 +52,21 @@
                     </ul>
 
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">View Books</asp:LinkButton>
-                        </li>
-                        
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server">User Login</asp:LinkButton>
+                         <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="btnApplyTest" runat="server" OnClick="btnApplyTest_Click" Visible="False">Apply Test</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server">Sign Up</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="btnLogin" runat="server" OnClick="btnLogin_Click">Login</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Logout</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="btnSignUpRedirect" runat="server" OnClick="btnSignUpRedirect_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="btnLogout" runat="server" OnClick="btnLogout_Click" Visible="False">Logout</asp:LinkButton>
                         </li>
 
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">Hello user</asp:LinkButton>
-
+                            <asp:LinkButton class="nav-link" ID="btnUserProfileView" runat="server" OnClick="btnUserProfileView_Click" Visible="False">Hello user</asp:LinkButton>
                         </li>
                     </ul>
                 </div>
@@ -85,40 +83,16 @@
         </div>
         <!-- Main Content Placeholder -->
 
-         <!-- Footer -->
         <footer>
-            <div id="footer-top" class="container-fluid">
+            <div id="footer" class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p>
-                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
-                            &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server">Author Management</asp:LinkButton>
-                            &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server">Publisher Management</asp:LinkButton>
-                            &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server">Book Inventory</asp:LinkButton>
-                            &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server">Book Issuing</asp:LinkButton>
-                            &nbsp;
-                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server">Member Management</asp:LinkButton>
-                        </p>
-
-                    </div>
-
-                </div>
-            </div>
-            <div id="footer-bottom" class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p>&copy All rights reserved. HBSecurity applies MITRE ATT&CK's.
-                            <a class="footerlinks" href="#" target="_blank">Simple Snippets</a></p>
+                        <p>&copy All rights reserved. HBSecurity
                     </div>
                 </div>
             </div>
-
         </footer>
-        <!-- ./Footer -->
+
     </form>
 </body>
 </html>

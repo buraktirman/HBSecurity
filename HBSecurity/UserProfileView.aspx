@@ -126,7 +126,6 @@
                                 <asp:Label ID="lblNewPassword" runat="server" Text="New Password"></asp:Label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="txtNewPassword" runat="server" TextMode="Password"></asp:TextBox>
-                                    <asp:CompareValidator ID="cvNewPassword" runat="server" ErrorMessage="Passwords are not matching!" ControlToValidate="txtNewPassword" ControlToCompare="txtOldPassword"></asp:CompareValidator>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +134,7 @@
                             <div class="col-8 mx-auto">
                                 <center>
                                     <div class="form-group">
-                                        <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnUpdate" runat="server" Text="Update" />
+                                        <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
                                     </div>
                                 </center>
                             </div>
@@ -169,8 +168,15 @@
                             </div>
                         </div>
                         <div class="row">
+                            <asp:SqlDataSource ID="dsMitreTests" runat="server" ConnectionString="<%$ ConnectionStrings:HBSecurityConnectionString %>" SelectCommand="SELECT [TestResult], [TestCategory] FROM [Reports]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView class="table table-striped table-striped" ID="gvMitreAttacks" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-striped table-striped" ID="gvMitreAttacks" runat="server" AutoGenerateColumns="False" DataSourceID="dsMitreTests">
+                                    <Columns>
+                                        <asp:BoundField DataField="TestResult" HeaderText="TestResult" SortExpression="TestResult" />
+                                        <asp:BoundField DataField="TestCategory" HeaderText="TestCategory" SortExpression="TestCategory" />
+                                    </Columns>
+                                </asp:GridView>
                             </div>
                         </div>
                     </div>
