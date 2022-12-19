@@ -23,13 +23,25 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <style>
+        #navbarSupportedContent a:hover {
+        text-decoration: underline;
+        color: red;
+        background-color: #ddd;
+        }
+        #navbarSupportedContent a {
+            border-radius: 20px 20px 20px 20px;
+            background: #9837cb;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="Home.aspx">
-                    <img src="imgs/hb_security_logo.jpg"  height="100" />
+                    <img src="Images/hb_security_logo.jpg"  height="100" />
                     HB Security
                 </a>
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,41 +12,21 @@ namespace HBSecurity
 {
     public partial class UserProfileView : System.Web.UI.Page
     {
+        string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=HBSecurity;Trusted_Connection=True");
-            //    try
-            //    {
-            //        if (Session["ContactName"].ToString() == "" || Session["ContactName"] == null)
-            //        {
-            //            Response.Write("<script>alert('Session Expired Login Again');</script>");
-            //            Response.Redirect("UserLogin.aspx");
-            //        }
-            //        else
-            //        {
-
-            //            if (!Page.IsPostBack)
-            //            {
-            //                getUserPersonalDetails();
-            //            }
-
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        Response.Write("<script>alert('Session Expired Login Again');</script>");
-            //        Response.Redirect("UserLogin.aspx");
-            //    }
-            getUserPersonalDetails();
 
             if (Session["role"] == null)
             {
                 Response.Redirect("Home.aspx");
             }
+
+            //GetUserPersonalDetails();
+            gvMitreAttacks.DataSource = GetReports();
+            gvMitreAttacks.DataBind();
         }
 
-        void getUserPersonalDetails()
+        void GetUserPersonalDetails()
         {
 
             try
@@ -56,7 +37,7 @@ namespace HBSecurity
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from Users WHERE Id='" + 2  + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from Users WHERE Email='" + Session["email"].ToString().Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -70,7 +51,7 @@ namespace HBSecurity
                 ddlCountry.SelectedValue = dt.Rows[0]["Country"].ToString().Trim();
                 txtEmail.Text = dt.Rows[0]["Email"].ToString();
                 txtOldPassword.Text = dt.Rows[0]["Password"].ToString();
-
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -81,20 +62,21 @@ namespace HBSecurity
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            updateUserPersonalDetails();
+            UpdateUserPersonalDetails();
         }
 
-        void updateUserPersonalDetails()
+        void UpdateUserPersonalDetails()
         {
-            string password = "";
-            if (txtOldPassword.Text.Trim() == "")
+            string password;
+            if (txtNewPassword.Text.Trim() == "")
             {
-                password = txtNewPassword.Text.Trim();
+                password = txtOldPassword.Text.Trim();
             }
             else
             {
                 password = txtNewPassword.Text.Trim();
             }
+
             try
             {
                 SqlConnection con = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=HBSecurity;Trusted_Connection=True");
@@ -104,7 +86,8 @@ namespace HBSecurity
                 }
 
 
-                SqlCommand cmd = new SqlCommand("UPDATE Users SET CompanyName=@CompanyName, ContactName=@ContactName, ContactTitle=@ContactTitle, Phone=@Phone, Address=@Address, PostalCode=@PostalCode, Country=@Country, Email=@Email, Password=@Password WHERE Email='" + "tayfun@gmail.com" + "'", con);
+                SqlCommand cmd = new SqlCommand("UPDATE Users SET CompanyName=@CompanyName, ContactName=@ContactName, ContactTitle=@ContactTitle, Phone=@Phone, Address=@Address, PostalCode=@PostalCode, Country=@Country, Email=@Email, Password=@Password WHERE Email='" + Session["email"].ToString().Trim() + "'", con);
+
 
                 cmd.Parameters.AddWithValue("@CompanyName", txtCompanyName.Text.Trim());
                 cmd.Parameters.AddWithValue("@ContactName", txtContactName.Text.Trim());
@@ -118,21 +101,45 @@ namespace HBSecurity
 
                 int result = cmd.ExecuteNonQuery();
                 con.Close();
+                Session["contactname"] = txtContactName.Text.Trim();
+                Session["email"] = txtEmail.Text.Trim();
+
                 if (result > 0)
                 {
                     Response.Write("<script>alert('Your Details Updated Successfully');</script>");
-                    getUserPersonalDetails();
+                    //GetUserPersonalDetails();
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invaid entry');</script>");
+                    Response.Write("<script>alert('Invalid entry');</script>");
                 }
-
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
+        }
+
+        protected void btnBringData_Click(object sender, EventArgs e)
+        {
+            GetUserPersonalDetails();
+        }
+
+        private DataTable GetReports()
+        {
+            string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=HBSecurity;Integrated Security=True";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            DataTable dtTests = new DataTable();
+
+            if (connection.State == ConnectionState.Open)
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT u.ContactName, t.Name , r.TestResult, r.TestDate FROM Users u, Reports r, Tests t WHERE u.Id = r.UserId AND t.Id = r.TestId AND u.Email ='" + Session["email"].ToString().Trim() + "'", connection);
+                adapter.Fill(dtTests);
+            }
+
+            return dtTests;
         }
     }
 }

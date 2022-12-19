@@ -18,14 +18,14 @@
          <div class="row">
             <div class="col-md-6"> <%--<col-md-6: It will occupy 6 space, as the device size greater than medium size.>--%> 
                <center>
-                  <img width="400px" height="180px" src="imgs/mitre_corporation.png"/>
+                  <img width="400px" height="180px" src="Images/mitre_corporation.png"/>
                   <h4>Information About MITRE</h4>
                   <p class="text-justify">You can find useful information about MITRE foundation and its activities.</p>
                </center>
             </div>
             <div class="col-md-6">
                <center>
-                   <img  width="400px" height="180px" src="imgs/mitre_att&ck.jpg" />
+                   <img  width="400px" height="180px" src="Images/mitre_att&ck.jpg" />
                   <h4>MITTRE ATT&CK Tests</h4>
                   <p class="text-justify">We provide 2 kinds of MITRE ATT&CK tests for your company. You can apply and see the results.</p>
                </center>

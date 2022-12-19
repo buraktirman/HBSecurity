@@ -33,6 +33,42 @@ namespace HBSecurity
         protected global::System.Web.UI.WebControls.DropDownList ddlTestTypes;
 
         /// <summary>
+        /// lblAccountName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAccountName;
+
+        /// <summary>
+        /// txtAccountName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAccountName;
+
+        /// <summary>
+        /// lblAccountPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAccountPassword;
+
+        /// <summary>
+        /// txtAccountPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAccountPassword;
+
+        /// <summary>
         /// btnApplyTest control.
         /// </summary>
         /// <remarks>

@@ -4,46 +4,46 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
 
-        .container {
-            width: 100%;
-        }
+            .container {
+                width: 100%;
+            }
 
             .container .row {
                 width: 100%;
                 margin: auto;
             }
 
-                .container .row .header {
-                    width: 60%;
-                    text-align: center;
-                    margin: auto;
-                }
+            .container .row .header {
+                width: 60%;
+                text-align: center;
+                margin: auto;
+            }
 
-                    .container .row .header h1 {
-                        padding-top: 30px;
-                        font-size: 45px;
-                        color: cornflowerblue;
-                    }
+            .container .row .header h1 {
+                padding-top: 30px;
+                font-size: 45px;
+                color: cornflowerblue;
+            }
 
-                    .container .row .header p {
-                        margin-top: 15px;
-                        font-size: 18px;
-                        line-height: 1.5;
-                        color: #6e6e6e;
-                    }
+            .container .row .header p {
+                margin-top: 15px;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #6e6e6e;
+            }
 
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: auto;
-        }
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin: auto;
+            }
 
             .content .card {
                 flex: 1;
@@ -52,23 +52,23 @@
                 background-color: #fff
             }
 
-                .content .card img {
-                    width: 100%;
-                    height: auto;
-                }
+            .content .card img {
+                width: 100%;
+                height: auto;
+            }
 
-                .content .card h4 {
-                    margin-top: 10px;
-                    margin-left: 10px;
-                    font-size: 18px;
-                }
+            .content .card h4 {
+                margin-top: 10px;
+                margin-left: 10px;
+                font-size: 18px;
+            }
 
-                .content .card p {
-                    font-size: 15px;
-                    color: #6e6e6e;
-                    line-height: 1.5;
-                    padding: 10px;
-                }
+            .content .card p {
+                font-size: 15px;
+                color: #6e6e6e;
+                line-height: 1.5;
+                padding: 10px;
+            }
 
         @media screen and (max-width: 768px) {
             .content {
@@ -116,28 +116,30 @@
                                 ATT&CK is open and available to any person or organization for use at no charge.
                     </p>
                 </div>
-            
 
-            <div class="card">
-                <%--<img src="imgs/mitre_corporation.png" />--%>
-                <h4>Some MITRE ATT&CK Techniques</h4>
-                <p> 1-Reconnaissance: gathering information to plan future adversary operations.<br />
-                    2-Resource Development: establishing resources to support operations.<br />
-                    3-Initial Access: trying to get into your network.<br />
-                    4-Execution: trying the run malicious code.<br />
-                    5-Persistence: trying to maintain their foothold.<br />
-                    6-Privilege Escalation: trying to gain higher-level permissions.<br />
-                    7-Defense Evasion: trying to avoid being detected.<br />
-                    8-Credential Access: stealing accounts names and passwords.<br />
-                    9-Discovery: trying to figure out your environment.<br />
-                    10-Lateral Movement: moving through your environment.<br />
-                    11-Collection: gathering data of interest to the adversary goal.<br />
-                    12-Command and Control: communicating with compromised systems to control them.<br />
-                    13-Exfiltration: stealing data.<br />
-                    14-Impact: manipulate, interrupt, or destroy systems and data.</p>
+
+                <div class="card">
+                    <%--<img src="imgs/mitre_corporation.png" />--%>
+                    <h4>Some MITRE ATT&CK Techniques</h4>
+                    <p>
+                        1-Reconnaissance: gathering information to plan future adversary operations.<br />
+                        2-Resource Development: establishing resources to support operations.<br />
+                        3-Initial Access: trying to get into your network.<br />
+                        4-Execution: trying the run malicious code.<br />
+                        5-Persistence: trying to maintain their foothold.<br />
+                        6-Privilege Escalation: trying to gain higher-level permissions.<br />
+                        7-Defense Evasion: trying to avoid being detected.<br />
+                        8-Credential Access: stealing accounts names and passwords.<br />
+                        9-Discovery: trying to figure out your environment.<br />
+                        10-Lateral Movement: moving through your environment.<br />
+                        11-Collection: gathering data of interest to the adversary goal.<br />
+                        12-Command and Control: communicating with compromised systems to control them.<br />
+                        13-Exfiltration: stealing data.<br />
+                        14-Impact: manipulate, interrupt, or destroy systems and data.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-   
+
 </asp:Content>

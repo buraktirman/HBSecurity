@@ -2130,22 +2130,19 @@
     <Content Include="fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="fontawesome\svgs\solid\z.svg" />
     <Content Include="Home.aspx" />
-    <Content Include="imgs\cybersecurity-banner.jpg" />
-    <Content Include="imgs\hb_security_logo.jpg" />
-    <Content Include="imgs\logo.png" />
-    <Content Include="imgs\mitre_att&amp;ck.jpg" />
-    <Content Include="imgs\mitre_corporation.png" />
-    <Content Include="imgs\mitre_reports.jpg" />
-    <Content Include="imgs\user_login.jpg" />
-    <Content Include="Login.aspx" />
+    <Content Include="Images\cybersecurity-banner.jpg" />
+    <Content Include="Images\hb_security_logo.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mitre_att&amp;ck.jpg" />
+    <Content Include="Images\mitre_corporation.png" />
+    <Content Include="Images\mitre_reports.jpg" />
+    <Content Include="Images\user_login.jpg" />
     <Content Include="MitreAttacks.aspx" />
     <Content Include="MitreInfo.aspx" />
-    <Content Include="SignUp.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="UserProfileView.aspx" />
     <Content Include="UserSignUp.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutUs.aspx.cs">
@@ -2161,13 +2158,6 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -2191,13 +2181,6 @@
       <DependentUpon>MitreInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.aspx.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SignUp.aspx.designer.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2218,13 +2201,6 @@
     </Compile>
     <Compile Include="UserSignUp.aspx.designer.cs">
       <DependentUpon>UserSignUp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -58,6 +58,7 @@ namespace HBSecurity
         {
             Session["email"] = "";
             Session["contactname"] = "";
+            Session["user_id"] = "";
             Session["role"] = "";
 
             btnLogin.Visible = true; // user login link button

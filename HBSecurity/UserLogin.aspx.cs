@@ -56,7 +56,6 @@ namespace HBSecurity
             {
                 SqlConnection con = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=HBSecurity;Trusted_Connection=True");
                 SqlCommand cmd = new SqlCommand("SELECT * from Users WHERE Email='" + txtEmail.Text + "' AND Password='" + txtPassword.Text + "'", con);
-                //cmd.Connection = con;
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
@@ -66,43 +65,11 @@ namespace HBSecurity
                         Response.Write("<script>alert('Successful login');</script>");
                         Session["email"] = dr.GetValue(8).ToString();
                         Session["contactname"] = dr.GetValue(2).ToString();
+                        Session["user_id"] = dr.GetValue(0).ToString();
                         Session["role"] = "user";
                     }
                     Response.Redirect("Home.aspx");
                 }
-
-
-                //try
-                //{
-                //    SqlConnection con = new SqlConnection(strcon);
-                //    if (con.State == ConnectionState.Closed)
-                //    {
-                //        con.Open();
-
-                //    }
-                //    SqlCommand cmd = new SqlCommand("SELECT * from Users WHERE Email='" + txtEmail.Text.Trim() + "' AND Password='" + txtPassword.Text.Trim() + "'", con);
-                //    SqlDataReader dr = cmd.ExecuteReader();
-                //    if (dr.HasRows)
-                //    {
-                //        while (dr.Read())
-                //        {
-                //            Response.Write("<script>alert('Successful login');</script>");
-                //            Session["email"] = dr.GetValue(8).ToString();
-                //            Session["contactname"] = dr.GetValue(2).ToString();
-                //            Session["role"] = "user";
-                //        }
-                //        Response.Redirect("Home.aspx");
-                //    }
-                //    else
-                //    {
-                //        Response.Write("<script>alert('Invalid input! Try again.');</script>");
-                //    }
-
-                //}
-                //catch (Exception ex)
-                //{
-                //    Response.Write("<script>alert('" + ex.Message + "');</script>");
-                //}
             }
         }
     }

@@ -33,15 +33,6 @@ namespace HBSecurity
         protected global::System.Web.UI.WebControls.TextBox txtCompanyName;
 
         /// <summary>
-        /// rfvCustomerId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCustomerId;
-
-        /// <summary>
         /// lblContactName control.
         /// </summary>
         /// <remarks>
@@ -58,15 +49,6 @@ namespace HBSecurity
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContactName;
-
-        /// <summary>
-        /// rfvContactName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContactName;
 
         /// <summary>
         /// lblContactTitle control.
@@ -87,15 +69,6 @@ namespace HBSecurity
         protected global::System.Web.UI.WebControls.TextBox txtContactTitle;
 
         /// <summary>
-        /// rfvContactTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContactTitle;
-
-        /// <summary>
         /// lblPhone control.
         /// </summary>
         /// <remarks>
@@ -112,15 +85,6 @@ namespace HBSecurity
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
-
-        /// <summary>
-        /// rfvPhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
 
         /// <summary>
         /// lblAddress control.
@@ -195,24 +159,6 @@ namespace HBSecurity
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// RequiredFieldValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-
-        /// <summary>
-        /// revEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
-
-        /// <summary>
         /// lblOldPassword control.
         /// </summary>
         /// <remarks>
@@ -249,6 +195,15 @@ namespace HBSecurity
         protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
 
         /// <summary>
+        /// btnBringData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBringData;
+
+        /// <summary>
         /// btnUpdate control.
         /// </summary>
         /// <remarks>
@@ -256,24 +211,6 @@ namespace HBSecurity
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
-
-        /// <summary>
-        /// dsMitreTests control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsMitreTests;
-
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
         /// gvMitreAttacks control.

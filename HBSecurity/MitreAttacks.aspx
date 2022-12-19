@@ -1,16 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="MitreAttacks.aspx.cs" Inherits="HBSecurity.MitreAttacks" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 mx-auto">  <%--mx auto to center.--%>
+            <div class="col-md-6 mx-auto">
+                <%--mx auto to center.--%>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img width="100px" src="imgs/logo.png" /> <br /> <br />
+                                    <img width="100px" src="Images/logo.png" />
+                                    <br />
+                                    <br />
                                 </center>
                             </div>
                         </div>
@@ -30,10 +34,10 @@
                             <div class="col-md-6 mx-auto">
                                 <asp:Label ID="lblTestType" runat="server" Text="Test Type"></asp:Label>
                                 <div class="form-group">
-                                    <asp:DropDownList class="form-control" ID="ddlTestTypes" runat="server">
-                                        <asp:ListItem Text="Select" Value="Select" />
+                                    <asp:DropDownList class="form-control" ID="ddlTestTypes" OnSelectedIndexChanged="CheckCreateAccountSelected" runat="server" AutoPostBack="True">
+                                        <asp:ListItem Text="Select" Value="" />
                                         <asp:ListItem Text="Network Service Discovery" Value="Network Service Discovery" />
-                                        <asp:ListItem Text="Create Account: Local Account" Value="Create Account: Local Account" />
+                                        <asp:ListItem Text="Create Account: Local Account" Value="Create Account: Local Account"  />
                                         <asp:ListItem Text="Network Sniffing" Value="Network Sniffing" />
                                         <asp:ListItem Text="Phishing" Value="Phishing" />
                                         <asp:ListItem Text="Account Manipulation" Value="Account Manipulation" />
@@ -42,6 +46,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6 mx-auto">
+                                <asp:Label ID="lblAccountName" runat="server" Text="Account Name" Visible="False"></asp:Label>
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtAccountName" runat="server" Visible="False"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mx-auto">
+                                <asp:Label ID="lblAccountPassword" runat="server" Text="Account Password" Visible="False"></asp:Label>
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtAccountPassword" runat="server" TextMode="Password" Visible="False"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
                         <div class="row">
                             <div class="col-8 mx-auto">
                                 <center>

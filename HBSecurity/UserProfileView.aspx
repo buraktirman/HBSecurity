@@ -12,7 +12,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img width="100px" src="imgs/user_login.jpg" />
+                                    <img width="100px" src="Images/user_login.jpg" />
                                 </center>
                             </div>
                         </div>
@@ -33,16 +33,16 @@
                                 <asp:Label ID="lblCompanyName" Text="Company Name" runat="server" />
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtCompanyName" runat="server" placeholder="Ex: Vindum LLC"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvCustomerId" runat="server"
-                                        ControlToValidate="txtCompanyName" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <%--<asp:RequiredFieldValidator ID="rfvCustomerId" runat="server"
+                                        ControlToValidate="txtCompanyName" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <asp:Label ID="lblContactName" Text="Contact Name" runat="server" />
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtContactName" runat="server" placeholder="Ex: Hasan Uysal"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvContactName" runat="server"
-                                        ControlToValidate="txtContactName" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <%-- <asp:RequiredFieldValidator ID="rfvContactName" runat="server"
+                                        ControlToValidate="txtContactName" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                                 </div>
                             </div>
                         </div>
@@ -51,16 +51,17 @@
                                 <asp:Label ID="lblContactTitle" Text="Contact Title" runat="server" />
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtContactTitle" runat="server" placeholder="Ex: CEO"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvContactTitle" runat="server"
-                                        ControlToValidate="txtContactTitle" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <%--<asp:RequiredFieldValidator ID="rfvContactTitle" runat="server"
+                                        ControlToValidate="txtContactTitle" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                                 </div>
                             </div>
+
                             <div class="col-md-6">
                                 <asp:Label ID="lblPhone" Text="Phone" runat="server" />
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtPhone" runat="server" placeholder="Ex: +15555555555"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvPhone" runat="server"
-                                        ControlToValidate="txtPhone" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <%-- <asp:RequiredFieldValidator ID="rfvPhone" runat="server"
+                                        ControlToValidate="txtPhone" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +86,7 @@
                                 <asp:Label ID="lblCountry" runat="server" Text="Country"></asp:Label>
                                 <div class="form-group">
                                     <asp:DropDownList class="form-control" ID="ddlCountry" runat="server">
-                                        <asp:ListItem Text="Select" Value="Select" />
+                                        <asp:ListItem Text="Select" Value="" />
                                         <asp:ListItem Text="Germany" Value="Germany" />
                                         <asp:ListItem Text="Spain" Value="Spain" />
                                         <asp:ListItem Text="France" Value="France" />
@@ -103,23 +104,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                        </div>
+
 
                         <div class="row">
                             <div class="col-md-4">
                                 <asp:Label ID="lblEmail" Text="Email" runat="server" />
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtEmail" runat="server" placeholder="Ex: johnsmith@gmail.com"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
                                         ControlToValidate="txtEmail" ErrorMessage="This field can not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Enter a valid email address!" ControlToValidate="txtEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Enter a valid email address!" ControlToValidate="txtEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>--%>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <asp:Label ID="lblOldPassword" runat="server" Text="Old Password"></asp:Label>
                                 <div class="form-group">
-                                    <asp:TextBox class="form-control" ID="txtOldPassword" runat="server" TextMode="Password" ReadOnly="True"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="txtOldPassword" runat="server" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -134,23 +134,36 @@
                             <div class="col-8 mx-auto">
                                 <center>
                                     <div class="form-group">
+                                        <asp:Button class="btn btn-secondary btn-block btn-lg" ID="btnBringData" runat="server" Text="Bring Current Data" OnClick="btnBringData_Click" />
+                                    </div>
+                                </center>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 mx-auto">
+                                <center>
+                                    <div class="form-group">
                                         <asp:Button class="btn btn-primary btn-block btn-lg" ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
                                     </div>
                                 </center>
+
                             </div>
                         </div>
+                        <a href="Home.aspx"><- Return to Homepage</a><br>
+                        <br>
                     </div>
+
                 </div>
-                <a href="Home.aspx"><- Return to Homepage</a><br>
-                <br>
             </div>
+
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img width="130px" src="imgs/mitre_reports.jpg" />
+                                    <img width="130px" src="Images/mitre_reports.jpg" />
                                 </center>
                             </div>
                         </div>
@@ -168,20 +181,33 @@
                             </div>
                         </div>
                         <div class="row">
-                            <asp:SqlDataSource ID="dsMitreTests" runat="server" ConnectionString="<%$ ConnectionStrings:HBSecurityConnectionString %>" SelectCommand="SELECT [TestResult], [TestCategory] FROM [Reports]"></asp:SqlDataSource>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView class="table table-striped table-striped" ID="gvMitreAttacks" runat="server" AutoGenerateColumns="False" DataSourceID="dsMitreTests">
+                                <asp:GridView class="table table-striped table-striped" ID="gvMitreAttacks" runat="server" AutoGenerateColumns="False"  CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
                                     <Columns>
-                                        <asp:BoundField DataField="TestResult" HeaderText="TestResult" SortExpression="TestResult" />
-                                        <asp:BoundField DataField="TestCategory" HeaderText="TestCategory" SortExpression="TestCategory" />
+                                        <asp:BoundField DataField="ContactName" HeaderText="Contact Name" SortExpression="ContactName" />
+                                        <asp:BoundField DataField="Name" HeaderText="Test Name" SortExpression="TestName" />
+                                        <asp:BoundField DataField="TestResult" HeaderText="Test Result" SortExpression="TestResult" />
+                                        <asp:BoundField DataField="TestDate" HeaderText="Test Date" SortExpression="TestDate" />
                                     </Columns>
+                                    <EditRowStyle BackColor="#7C6F57" />
+                                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#E3EAEB" />
+                                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                                    <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                                    <SortedAscendingHeaderStyle BackColor="#246B61" />
+                                    <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                                    <SortedDescendingHeaderStyle BackColor="#15524A" />
                                 </asp:GridView>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
+
 </asp:Content>
